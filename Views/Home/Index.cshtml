@@ -1,0 +1,42 @@
+﻿@model DataAnnotation.Models.Employee
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(model => model.EmployeeId) &nbsp; @Html.TextBoxFor(model => model.EmployeeId)
+        @Html.ValidationMessageFor(model => model.EmployeeId)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.EmployeeName) &nbsp; @Html.TextBoxFor(model => model.EmployeeName)
+        @Html.ValidationMessageFor(model => model.EmployeeName)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.EmployeeAge) &nbsp; @Html.TextBoxFor(model => model.EmployeeAge)
+        @Html.ValidationMessageFor(model => model.EmployeeAge)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.EmployeeGender) &nbsp; @Html.TextBoxFor(model => model.EmployeeGender)
+        @Html.ValidationMessageFor(model => model.EmployeeGender)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.EmployeeEmail) &nbsp; @Html.TextBoxFor(model => model.EmployeeEmail)
+        @Html.ValidationMessageFor(model => model.EmployeeEmail)
+    </p>
+    <input type="submit" label="Submit" />
+
+}
